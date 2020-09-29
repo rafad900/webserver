@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> This is blog home </title>
+	</head>
+	<body> 
+		<p> Tell me if there is something here </p>
+		{% for post in posts %}
+            <h1> {{ post.title }} </h1>
+            <p> By {{ post.author }} on {{ post.date_posted }} </p>
+ 			<p> {{ post.content }} </p>
+ 		{% endfor %}
+        <div> 
+            {{ post.users }}
+        </div>
+        <p> This is the media url: {{ MEDIA_URL }} </p>
+        <p> {{ pic.photo.url }} </p>
+        <img src="{{pic.photo.url}}">
+	</body>
+</html>
